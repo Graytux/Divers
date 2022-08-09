@@ -1,0 +1,19 @@
+
+Devred
+=======
+chemin = /etc/rc.d/rc2.d
+runtime = Sagent_stambia
+action = purge / start / stop
+script = DEVR_EXPLOIT_STAMBIA_RUNTIME
+
+=============================================================================================================================
+
+Eurodif
+=======
+chemin = /etc/rc.d/rc2.d
+runtime = Sstambia-1 / Sstambia-2 / Sstambia-3 / Sstambia-4 / Sstambia-5
+action = purge / start / stop
+script = EURO_EXPLOIT_STAMBIA_RUNTIME
+
+=============================================================================================================================
+
