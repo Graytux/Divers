@@ -1,5 +1,4 @@
 #!/bin/bash
-
 PARAM=$*
 STRING3=("I" "L" "O" "V" "E" "Y" "O" "U")
 lenSTRG3=${#STRING3[*]}
@@ -25,25 +24,27 @@ do
         do
                 IDS=$(( ID + 1 ))
                 TMP[ID]=$(( ${TAB[${ID}]} + ${TAB[${IDS}]} ))
-                if [ "${TMP[${ID}]}" -eq 10 ]; then
-                        TMP[ID]=1
-                elif [ "${TMP[${ID}]}" -eq 11 ]; then
-                        TMP[ID]=2
-                elif [ "${TMP[${ID}]}" -eq 12 ]; then
-                        TMP[ID]=3
-                elif [ "${TMP[${ID}]}" -eq 13 ]; then
-                        TMP[ID]=4
-                elif [ "${TMP[${ID}]}" -eq 14 ]; then
-                        TMP[ID]=5
-                elif [ "${TMP[${ID}]}" -eq 15 ]; then
-                        TMP[ID]=6
-                elif [ "${TMP[${ID}]}" -eq 16 ]; then
-                        TMP[ID]=7
-                elif [ "${TMP[${ID}]}" -eq 17 ]; then
-                        TMP[ID]=8
-                elif [ "${TMP[${ID}]}" -eq 18 ]; then
-                        TMP[ID]=9
-                fi
+                case ${TMP[${ID}]} in
+                        10)
+                                TMP[ID]=1 ;;
+                        11)
+                                TMP[ID]=2 ;;
+                        12)
+                                TMP[ID]=3 ;;
+                        13)
+                                TMP[ID]=4 ;;
+                        14)
+                                TMP[ID]=5 ;;
+                        15)
+                                TMP[ID]=6 ;;
+                        16)
+                                TMP[ID]=7 ;;
+                        17)
+                                TMP[ID]=8 ;;
+                        18)     
+                                TMP[ID]=9 ;;
+                        *)      ;;  
+                esac
         done
         TAB=("${TMP[@]}")
         if [ ${#TAB[*]} -le 2 ]; then
