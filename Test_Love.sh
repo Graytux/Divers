@@ -1,5 +1,4 @@
 #!/bin/bash
-
 PARAM=$*
 STRING3=("I" "L" "O" "V" "E" "Y" "O" "U")
 lenSTRG3=${#STRING3[*]}
